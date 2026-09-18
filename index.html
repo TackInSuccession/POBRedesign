@@ -1681,7 +1681,7 @@ async function visualizeCurrentSearch(){
 
   el('chartTitle').textContent = 'Occurrences of "' + query + '" across the selected books';
   const optionsText = [caseSensitive ? 'case-sensitive' : null, wholeWord ? 'whole word' : null].filter(Boolean).join(', ');
-  el('chartSubtitle').textContent = 'Exact match' + (optionsText ? ' (' + optionsText + ')';
+  el('chartSubtitle').textContent = 'Exact match' + (optionsText ? ' (' + optionsText + ')' : '') + ' \u00b7 raw count per book';
   el('chartSvgWrap').innerHTML = '<div class="loading-state"><div class="loading-inline"><span class="spinner"></span>Counting matches\u2026</div></div>';
   showChartView();
 
