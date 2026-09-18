@@ -830,7 +830,7 @@ footer.note{
     </div>
     <div class="chart-panel">
       <div id="chartSvgWrap"></div>
-      <div class="chart-caption">Hover a point for its count. Click to view that book&rsquo;s results.</div>
+      <div class="chart-caption">Hover over a point for its count. Click to view that book&rsquo;s results.</div>
     </div>
   </div>
 
@@ -1681,7 +1681,7 @@ async function visualizeCurrentSearch(){
 
   el('chartTitle').textContent = 'Occurrences of "' + query + '" across the selected books';
   const optionsText = [caseSensitive ? 'case-sensitive' : null, wholeWord ? 'whole word' : null].filter(Boolean).join(', ');
-  el('chartSubtitle').textContent = 'Exact match' + (optionsText ? ' (' + optionsText + ')' : '') + ' \u00b7 raw count per book';
+  el('chartSubtitle').textContent = 'Exact match' + (optionsText ? ' (' + optionsText + ')';
   el('chartSvgWrap').innerHTML = '<div class="loading-state"><div class="loading-inline"><span class="spinner"></span>Counting matches\u2026</div></div>';
   showChartView();
 
