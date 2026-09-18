@@ -872,7 +872,12 @@ const el = (id) => document.getElementById(id);
 // canonical decomposition and pass through unfolded — a negligible edge case
 // for this corpus.)
 function foldDiacritics(str){
-  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  let result = '';
+  for(const ch of str){
+    const folded = ch.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    result += folded.length === 1 ? folded : ch;
+  }
+  return result;
 }
 
 function buildParagraphs(text){
